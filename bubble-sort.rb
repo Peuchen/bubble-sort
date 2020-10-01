@@ -3,8 +3,8 @@ def bubble_sort(numbers)
 #Compare pairs of numbers
 #If the first number is higher than the second, switch them around
   output = []
-  a = 0
-  if numbers.is_a?(Array)
+  while numbers.length >= 1
+    a = 0
     while (a+1) < numbers.length
       if numbers[a] > numbers[a+1]
         old_num = numbers[a]
@@ -16,11 +16,8 @@ def bubble_sort(numbers)
     #Return the sorted array
       a += 1
     end
-  end
-  output.unshift(numbers[-1])
-  numbers.tap(&:pop)
-  if numbers.length > 1
-    bubble_sort(numbers)
+    output.unshift(numbers[-1])
+    numbers.pop
   end
   output
 end
