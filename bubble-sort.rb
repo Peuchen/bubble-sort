@@ -1,7 +1,4 @@
-#Define a method that accepts an array as an argument
 def bubble_sort(numbers)
-#Compare pairs of numbers
-#If the first number is higher than the second, switch them around
   output = []
   while numbers.length >= 1
     a = 0
@@ -11,9 +8,6 @@ def bubble_sort(numbers)
         numbers[a] = numbers[a+1]
         numbers[a+1] = old_num
       end
-    #Else, keep the numbers in the same order
-    #Compare the next pairs
-    #Return the sorted array
       a += 1
     end
     output.unshift(numbers[-1])
